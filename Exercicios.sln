@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PRJ39076_L4_Ex02", "PRJ3907
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PRJ39076_L4_Ex03", "PRJ39076_L4_Ex03\PRJ39076_L4_Ex03.csproj", "{1B061C66-21AF-4B85-B052-85997923A227}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PRJ39076_L4_Ex04", "PRJ39076_L4_Ex04\PRJ39076_L4_Ex04.csproj", "{4D45B90E-5337-439A-9563-E8E72F315ABB}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{1B061C66-21AF-4B85-B052-85997923A227}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1B061C66-21AF-4B85-B052-85997923A227}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1B061C66-21AF-4B85-B052-85997923A227}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4D45B90E-5337-439A-9563-E8E72F315ABB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4D45B90E-5337-439A-9563-E8E72F315ABB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4D45B90E-5337-439A-9563-E8E72F315ABB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4D45B90E-5337-439A-9563-E8E72F315ABB}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
