@@ -4,58 +4,63 @@
     {
         static void Main(string[] args)
         {
-            //int[] op = new int[3];
-            int[] valor = new int[10];
-            int i = 0;
-            int res = 0, maiorV = 0, mediaA = 0;
+            //Original();
+            Linq();
+        }
+
+        static void Original()
+        {
             string repetir = "S";
 
-            while (string.Equals(repetir, "S", StringComparison.OrdinalIgnoreCase))
+            while (repetir.ToUpper() == "S")
             {
-                i = 0;
-
-                while (i < valor.Length)
-                {
-                    //Estudar sobre foreach e for
-                    //Como realizar operações gerais em um array
-                    //Diferentes tipos de operações em um array
-                    Console.WriteLine("Insira o " + (i + 1) + "° número :");
-                    valor[i] = int.Parse(Console.ReadLine());
-                    i++;
-                }
-
-
-                //valor.Length representa o número de índices no array;
-                //é possível realizar operações dentro da condicional de um loop for;
-                for (i = 0; i < valor.Length; i++)
-                {
-                    res += valor[i];
-                }
-
-
-                for (i = 0; i < valor.Length; i++)
-                {
-                    if (valor[i] > maiorV)
-                    {
-                        maiorV = valor[i];
-                    }
-                }
-
-                for (i = 0; i < valor.Length; i++)
-                {
-                    mediaA += valor[i];
-                }
-
-                mediaA = mediaA / valor.Length;
-
-
-                Console.WriteLine("A soma dos valores é: " + res);
-                Console.WriteLine("O maior valor é: " + maiorV);
-                Console.WriteLine("A média aritmética é: " + mediaA);
-                Console.WriteLine("Deseja repetir? (S/N): ");
-
-                repetir = Console.ReadLine();
                 Console.Clear();
+                int[] valores = new int[10];
+                int maiorValor = int.MinValue;
+                int somaValores = 0;
+                int mediaValores;
+
+                for (int num = 1; num <= valores.Length; num++)
+                {
+                    Console.Write($"Insira o {num}° número: ");
+                    int valor = int.Parse(Console.ReadLine());
+                    valores[num - 1] = valor;
+                    somaValores += valor;
+                    maiorValor = valor > maiorValor
+                                    ? valor
+                                    : maiorValor; // Notação ternária. Equivale a `if valores[num-1] > maiorValor { maiorValor = valores[num-1] }`
+                }
+
+                mediaValores = somaValores / valores.Length;
+
+                Console.WriteLine($"A soma dos valores é: {somaValores}");
+                Console.WriteLine($"O maior valor é: {maiorValor}");
+                Console.WriteLine($"A média aritmética é: {mediaValores}");
+                Console.Write("Deseja repetir? (S/N): ");
+                repetir = Console.ReadLine();
+            }
+        }
+
+        static void Linq()
+        {
+            string repetir = "S";
+
+            while (repetir.ToUpper() == "S")
+            {
+                Console.Clear();
+                int[] valores = new int[10];
+
+                for (int num = 1; num <= valores.Length; num++)
+                {
+                    Console.Write($"Insira o {num}° número: ");
+                    valores[num - 1] = int.Parse(Console.ReadLine());
+                }
+
+                Console.WriteLine($"A soma dos valores é: {valores.Sum()}");
+                Console.WriteLine($"O maior valor é: {valores.Max()}");
+                Console.WriteLine($"A média aritmética é: {Math.Ceiling(valores.Average())}"); // Math.Ceiling é para pegar o maior número inteiro mais próximo caso o resultado seja decimal (ex: se o resultado da média for 1,3, Math.Ceiling retorna 2)
+                Console.Write("Deseja repetir? (S/N): ");
+                repetir = Console.ReadLine();
             }
         }
     }
