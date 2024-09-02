@@ -1,0 +1,9 @@
+[Dd]ebug/
+[Rr]elease/
+[Bb]in/
+[Oo]bj/
+*.[Cc]onfig
+*.[Uu]ser
+*.suo
+.vscode/
+.vs/
