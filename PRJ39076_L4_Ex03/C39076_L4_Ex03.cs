@@ -6,9 +6,9 @@
         {
             string resposta = "S";
 
-            int n1, n2, res;
+            int n1, n2;
 
-            while (resposta == "S")
+            while (resposta?.ToUpper() == "S")
             {
                 Console.Write("Insira o primeiro valor entre 1 e 100: ");
                 n1 = int.Parse(Console.ReadLine());
@@ -28,9 +28,7 @@
                     n2 = int.Parse(Console.ReadLine());
                 }
 
-                res = n1 + n2;
-
-                Console.WriteLine("A soma dos números é: " + res);
+                Console.WriteLine($"A soma dos números é: {n1 + n2}");
 
                 Console.Write("Deseja repetir? (S/N): ");
                 resposta = Console.ReadLine();

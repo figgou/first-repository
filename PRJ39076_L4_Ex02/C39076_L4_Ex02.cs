@@ -8,7 +8,7 @@
 
             string repetir = "S";
 
-            while (repetir == "S")
+            while (repetir?.ToUpper() == "S")
             {
                 
                 Console.Write("Insira o sexo (F/M): ");
