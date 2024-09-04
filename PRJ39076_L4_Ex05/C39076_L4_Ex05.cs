@@ -11,26 +11,19 @@ namespace PRJ39076_L4_Ex05
     internal class C39076Ex05
     {
         static void Main(string[] args)
-        {
-            int i = 0;
-
+        {            
             List<int> valores = [];
             
             string resposta = "S";
 
-            
-
             while (resposta?.ToUpper() == "S")
             {
-                Console.Clear();
-                i = 0;
+                Console.Clear();                
 
                 while((valores.Sum()) < 100)
                 {   
-
                     Console.Write($"Insira um valor: ");
-                    valores.Add(int.Parse(Console.ReadLine()));
-                    
+                    valores.Add(int.Parse(Console.ReadLine()));                    
                 }
             
                 Console.WriteLine($"Soma dos valores: {valores.Sum()}");
@@ -44,4 +37,3 @@ namespace PRJ39076_L4_Ex05
         }
     }
 }
-
